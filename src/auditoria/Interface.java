@@ -131,12 +131,13 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           String sql = "select * from clientes;";
-            Statement stmt = null;
+           String sql = "select * from cliente;";
+           Connection conexao = null; 
+           PreparedStatement stmt = null;
             ResultSet rs = null;
             
         try {
-            stmt = conection.createStatement();
+            stmt = conexao.prepareStatement(sql);
             rs = stmt.executeQuery(sql);
             System.out.println(rs.getRow());
             

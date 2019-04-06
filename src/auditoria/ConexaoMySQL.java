@@ -51,13 +51,13 @@ Class.forName(driverName);
  
             String serverName = "localhost";    //caminho do servidor do BD
  
-            String mydatabase ="crm";        //nome do seu banco de dados
+            String mydatabase ="dbrestaurante";        //nome do seu banco de dados
  
             String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
  
             String username = "root";        //nome de um usuário de seu BD      
  
-            String password = "";      //sua senha de acesso
+            String password = "toor";      //sua senha de acesso
  
             connection = DriverManager.getConnection(url, username, password);
  
@@ -95,7 +95,7 @@ Class.forName(driverName);
  
 //Não conseguindo se conectar ao banco
  
-            System.out.println("Nao foi possivel conectar ao Banco de Dados.");
+            System.out.println("Nao foi possivel conectar ao Banco de Dados: " + e.getMessage());
  
             return null;
  
